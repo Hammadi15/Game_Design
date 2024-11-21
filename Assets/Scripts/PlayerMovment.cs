@@ -10,6 +10,8 @@ public class PlayerMovment : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
 
+    public bool FacingLeft { get; internal set; }
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
