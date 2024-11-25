@@ -135,6 +135,8 @@ GameObject:
   - component: {fileID: 13874427}
   - component: {fileID: 13874428}
   - component: {fileID: 13874429}
+  - component: {fileID: 13874431}
+  - component: {fileID: 13874430}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -186,7 +188,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5434651158628388295, guid: bdb605fe1671baeb0a442fa8510b1465, type: 3}
+  m_Sprite: {fileID: -6084743656019309223, guid: bdb605fe1671baeb0a442fa8510b1465, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -372,6 +374,33 @@ MonoBehaviour:
   - {fileID: 376840637}
   - {fileID: 212338702}
   - {fileID: 485867008}
+--- !u!114 &13874430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13874421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1db9501e7dccce6428a1e545736c184d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gun: {fileID: 111044892}
+--- !u!114 &13874431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13874421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc62681651aedc48bebb812ab6069ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attack: {fileID: -4141559924220461711, guid: 7e26d548ee400c643b34fb85c639c9b2, type: 3}
+  pointerPositon: {fileID: 5568386911938997224, guid: 7e26d548ee400c643b34fb85c639c9b2, type: 3}
 --- !u!1 &103317820
 GameObject:
   m_ObjectHideFlags: 0
@@ -1863,7 +1892,7 @@ Transform:
   m_GameObject: {fileID: 111044892}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.98, y: 0, z: 0}
+  m_LocalPosition: {x: 3.512, y: 0.498, z: 0}
   m_LocalScale: {x: 4.5532, y: 4.5532, z: 4.5532}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14646,6 +14675,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1569419187}
   m_CullTransparentMesh: 1
+--- !u!1 &1642731512
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1642731514}
+  - component: {fileID: 1642731513}
+  m_Layer: 0
+  m_Name: SwordInput
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1642731513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642731512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 7e26d548ee400c643b34fb85c639c9b2, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: PlayerPointer
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!4 &1642731514
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642731512}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.1443465, y: 0.4544518, z: 0.072349764}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1757993433
 GameObject:
   m_ObjectHideFlags: 0
@@ -16886,3 +16977,4 @@ SceneRoots:
   - {fileID: 1559335103}
   - {fileID: 977750730}
   - {fileID: 111044894}
+  - {fileID: 1642731514}
