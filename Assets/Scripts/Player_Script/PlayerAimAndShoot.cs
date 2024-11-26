@@ -10,6 +10,10 @@ public class PlayerAimAndShoot : MonoBehaviour
     [SerializeField] private GameObject gun;
     [SerializeField] private GameObject bullet;
     [SerializeField] private Transform bulletSpwanPoint;
+    [SerializeField] private float shootCooldown = 0.5f; // Cooldown duration in seconds
+
+    private float timer = 0f; // Tracks cooldown time
+
 
     private GameObject bulletInst;
 
@@ -22,6 +26,7 @@ public class PlayerAimAndShoot : MonoBehaviour
     {
         HandleGundRotation();
         HnadleGunShooting();
+        UpdateCollDownTimer();
     }
     private void HandleGundRotation()
     {
@@ -45,12 +50,20 @@ public class PlayerAimAndShoot : MonoBehaviour
 
     private void HnadleGunShooting()
     {
-        if (Mouse.current.leftButton.wasPressedThisFrame)
+        if (Mouse.current.leftButton.wasPressedThisFrame && timer <=0f)
         {
             //Spwan bullet
             bulletInst =  Instantiate(bullet, bulletSpwanPoint.position, gun.transform.rotation);
+            timer = shootCooldown;
+
         }
     }
-
+    private void UpdateCollDownTimer()
+    {
+        if (timer > 0f)
+        {
+            timer -= Time.deltaTime;
+        }
+    }
 
 }
