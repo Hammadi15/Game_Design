@@ -28,13 +28,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8498205619809717754}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.072162, y: 0.77265555, z: 0.04682869}
-  m_LocalScale: {x: -0.051531315, y: -0.051531315, z: -0.051531315}
+  m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
+  m_LocalPosition: {x: 6.155, y: 0.687, z: 0.04682869}
+  m_LocalScale: {x: -0.12494595, y: -0.12494595, z: -0.12494595}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 180, y: 180, z: 0}
 --- !u!212 &3034168853311542171
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: -8491210270536088695, guid: be879488785f265489f7bb59777d04fa, type: 3}
+  m_Sprite: {fileID: -4346244404228752641, guid: 310529b5b54a68f4ba98b519648993a8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -166,8 +166,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cce1a3dd9181d1b4fa1db9acca14e3e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalBulletSpeed: 15
-  destoryTime: 3
   whatDestroysBullet:
     serializedVersion: 2
     m_Bits: 1280
+  destoryTime: 3
+  normalBulletSpeed: 20
+  normalBulletDamage: 1
+  physicsBulletSpeed: 7
+  physicsBulletGravity: 3
+  physicsBulletDamage: 2
+  bulletType: 1
