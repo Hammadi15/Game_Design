@@ -8,14 +8,14 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Top
   - Water
   - UI
   - No Collision
-  - 
-  - 
-  - 
-  - 
+  - PlayerProjectile
+  - Enemy
+  - test
+  - jack
   - 
   - 
   - 
