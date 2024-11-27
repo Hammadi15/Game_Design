@@ -12,9 +12,9 @@ TagManager:
   - Water
   - UI
   - No Collision
-  - 
-  - 
-  - 
+  - Rocks
+  - Ground
+  - BorderForPlayer
   - 
   - 
   - 
