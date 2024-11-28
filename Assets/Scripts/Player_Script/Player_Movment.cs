@@ -1,8 +1,36 @@
+using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class Player_Movment : MonoBehaviour
 {
+    public int FacingDirection = 1;
+    public Rigidbody2D rb;
+    public Animator animator;
+
+    void FixedUpdate()
+    {
+        float horizontal = Input.GetAxis("Horizontal");
+        float vertical = Input.GetAxis("Vertical");
+
+        if (horizontal > 0 && transform.localScale.x < 0 ||
+            horizontal < 0 && transform.localScale.x > 0)
+        {
+            Flip();
+        }
+
+        animator.SetFloat("horizontal", Mathf.Abs(horizontal));
+        animator.SetFloat("vertical", Mathf.Abs(vertical));
+        rb.linearVelocity = new Vector2(horizontal, vertical) * Stats_Manager.Instance.Speed;
+    }
+
+    void Flip()
+    {
+        FacingDirection *= -1;
+        transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+    }
+
+    /*
     private Vector2 movement;
     private Rigidbody2D rb;
     private Animator animator;
@@ -39,8 +67,8 @@ public class Player_Movment : MonoBehaviour
         {
             rb.linearVelocity = movement * speed;
         }*/
-        //varient 3
-        rb.AddForce(movement * Stats_Manager.Instance.Speed);
-    }
+    //varient 3*/
+    /*rb.AddForce(movement * Stats_Manager.Instance.Speed);
+}*/
 
 }
