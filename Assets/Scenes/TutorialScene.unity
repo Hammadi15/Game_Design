@@ -18309,6 +18309,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 1050575509067467270, guid: b1ad021b803f9e4db8943952242d03ca, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 3075517783505622935, guid: b1ad021b803f9e4db8943952242d03ca, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.06
@@ -18349,9 +18353,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6961265731521274993, guid: b1ad021b803f9e4db8943952242d03ca, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.509
+      objectReference: {fileID: 0}
+    - target: {fileID: 6961265731521274993, guid: b1ad021b803f9e4db8943952242d03ca, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.273
+      objectReference: {fileID: 0}
+    - target: {fileID: 7276606425990963778, guid: b1ad021b803f9e4db8943952242d03ca, type: 3}
+      propertyPath: WeaponRange
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 7276606425990963778, guid: b1ad021b803f9e4db8943952242d03ca, type: 3}
       propertyPath: playerLayer.m_Bits
       value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 8496547593304601323, guid: b1ad021b803f9e4db8943952242d03ca, type: 3}
+      propertyPath: AttackRange
+      value: 0.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
