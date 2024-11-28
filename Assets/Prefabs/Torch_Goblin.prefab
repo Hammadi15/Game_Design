@@ -79,7 +79,7 @@ GameObject:
   - component: {fileID: 4993326294566135574}
   - component: {fileID: 1729680879871279065}
   m_Layer: 0
-  m_Name: Torch_Red_0
+  m_Name: Torch_Goblin
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
