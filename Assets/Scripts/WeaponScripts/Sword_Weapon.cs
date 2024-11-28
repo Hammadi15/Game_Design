@@ -2,15 +2,26 @@ using UnityEngine;
 
 public class Sword_Weapon : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private PlayerControls playerControls;
+    private Animator myAnimator;
+
+    private void Awake()
     {
-        
+        myAnimator = GetComponent<Animator>();
+        playerControls = new PlayerControls();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
     {
-        
+        playerControls.Enable();
+    }
+    private void Start()
+    {
+        playerControls.Combat.Attack.started += _ => Attack();
+    }
+
+    private void Attack()
+    {
+        myAnimator.SetTrigger("Attack");
     }
 }
