@@ -15,7 +15,7 @@ public class Sword_Weapon : MonoBehaviour
     {
         playerControls.Enable();
     }
-    private void Start()
+    void Start()
     {
         playerControls.Combat.Attack.started += _ => Attack();
     }
