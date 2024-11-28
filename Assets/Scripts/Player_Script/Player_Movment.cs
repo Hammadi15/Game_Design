@@ -1,11 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerMovment : MonoBehaviour
+public class Player_Movment : MonoBehaviour
 {
-    [SerializeField] private int speed;
     private Vector2 movement;
     private Rigidbody2D rb;
     private Animator animator;
@@ -43,7 +40,7 @@ public class PlayerMovment : MonoBehaviour
             rb.linearVelocity = movement * speed;
         }*/
         //varient 3
-        rb.AddForce(movement * speed);
+        rb.AddForce(movement * Stats_Manager.Instance.Speed);
     }
 
 }
