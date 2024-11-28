@@ -15,7 +15,9 @@ TagManager:
   - No Collision
   - Player
   - Enemy
-  - 
+  - Rocks
+  - Ground
+  - BorderForPlayer
   - 
   - 
   - 
