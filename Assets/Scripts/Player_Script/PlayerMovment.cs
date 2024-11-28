@@ -9,6 +9,7 @@ public class PlayerMovment : MonoBehaviour
     private Vector2 movement;
     private Rigidbody2D rb;
     private Animator animator;
+    public bool enabled_move;
 
     private void Start()
     {
@@ -17,18 +18,21 @@ public class PlayerMovment : MonoBehaviour
     }
     private void OnMovement(InputValue value)
     {
-        movement = value.Get<Vector2>();
-
-        if (movement.x != 0 || movement.y != 0)
+        if (enabled_move)
         {
-            animator.SetFloat("X", movement.x);
-            animator.SetFloat("Y", movement.y);
+            movement = value.Get<Vector2>();
 
-            animator.SetBool("IsWalking", true);
-        }
-        else
-        {
-            animator.SetBool("IsWalking", false);
+            if (movement.x != 0 || movement.y != 0)
+            {
+                animator.SetFloat("X", movement.x);
+                animator.SetFloat("Y", movement.y);
+
+                animator.SetBool("IsWalking", true);
+            }
+            else
+            {
+                animator.SetBool("IsWalking", false);
+            }
         }
     }
 
@@ -43,7 +47,10 @@ public class PlayerMovment : MonoBehaviour
             rb.linearVelocity = movement * speed;
         }*/
         //varient 3
-        rb.AddForce(movement * speed);
+        if (enabled_move)
+        {
+            rb.AddForce(movement * speed);
+        }
     }
 
 }
