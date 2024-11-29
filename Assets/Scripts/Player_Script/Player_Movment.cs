@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public class Player_Movment : MonoBehaviour
 {
+    [SerializeField] private int speed;
     private Vector2 movement;
     private Rigidbody2D rb;
     private Animator animator;
