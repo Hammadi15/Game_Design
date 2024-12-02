@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8321437945793825572}
   - component: {fileID: 6939435119409858012}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GameObject(Sword)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59,6 +59,7 @@ GameObject:
   - component: {fileID: 5644543970455181307}
   - component: {fileID: 433354858734982810}
   - component: {fileID: 6174603898480373445}
+  - component: {fileID: 746980909812272952}
   m_Layer: 0
   m_Name: Sword_0
   m_TagString: Untagged
@@ -168,5 +169,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e2b0c838b048d964f97cc8367a8b21d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &746980909812272952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6693451079804566680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19d9b8588ff0af4a1a91ebc31389392c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
