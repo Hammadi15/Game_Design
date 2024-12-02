@@ -21,6 +21,7 @@ public class PlayerMovment : MonoBehaviour
 
         if (movement.x != 0 || movement.y != 0)
         {
+
             animator.SetFloat("X", movement.x);
             animator.SetFloat("Y", movement.y);
 
