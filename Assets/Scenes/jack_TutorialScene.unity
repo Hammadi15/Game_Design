@@ -225,7 +225,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 50
-  walkSound: {fileID: 8300000, guid: 65924e4e02deaed45a0b23448a6e939b, type: 3}
 --- !u!114 &13874425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14248,6 +14247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cb4784ea8209896d91d34a4ff6b4744, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitSound: {fileID: 8300000, guid: 314104014ed7fa5409d3c3a099aa98ef, type: 3}
   Damage: 1
 --- !u!70 &977750727
 CapsuleCollider2D:
