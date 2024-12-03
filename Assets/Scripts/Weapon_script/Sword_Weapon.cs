@@ -4,6 +4,7 @@ public class Sword_Weapon : MonoBehaviour
 {
     private PlayerControls playerControls;
     private Animator myAnimator;
+    [SerializeField] private AudioClip attackSound;
 
     private void Awake()
     {
@@ -23,5 +24,6 @@ public class Sword_Weapon : MonoBehaviour
     private void Attack()
     {
         myAnimator.SetTrigger("Attack");
+        SoundManager.instance.PlaySound(attackSound);
     }
 }

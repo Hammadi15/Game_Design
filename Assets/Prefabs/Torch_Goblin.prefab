@@ -239,6 +239,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
+  hitSound: {fileID: 8300000, guid: 314104014ed7fa5409d3c3a099aa98ef, type: 3}
 --- !u!114 &8496547593304601323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -294,5 +295,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExperienceReward: 3
+  deathSound: {fileID: 8300000, guid: c0fd634b701fe8945815644530fb90df, type: 3}
   CurrentHealth: 3
   MaxHealth: 3
