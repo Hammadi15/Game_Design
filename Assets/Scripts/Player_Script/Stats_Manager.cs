@@ -15,6 +15,7 @@ public class Stats_Manager : MonoBehaviour
     [Header("Health stats")]
     public int MaxHealth = 5;
     public int CurrentHealth = 5;
+    public GameObject restart_ui;
 
     private void Awake()
     {
@@ -27,5 +28,11 @@ public class Stats_Manager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
+    private void Update()
+    {
+        if (CurrentHealth <= 0 && !restart_ui.activeSelf)
+        {
+            restart_ui.SetActive(true);
+        }
+    }
 }
