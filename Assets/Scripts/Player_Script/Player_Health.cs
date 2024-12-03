@@ -3,29 +3,27 @@ using UnityEngine.UI;
 
 public class Player_Health : MonoBehaviour
 {
-
-    public int CurrentHealth;
-    public int MaxHealth;
-
     public Sprite EmptyHeart;
     public Sprite FullHeart;
     public Image[] hearts;
 
+
     public void ChangeHealth(int amount)
     {
-        CurrentHealth -= amount;
-
-        if (CurrentHealth <= 0)
+        //Takes current health adds it and sets current helth to be minus the added number
+        Stats_Manager.Instance.CurrentHealth -= amount;
+        update_health();
+        if (Stats_Manager.Instance.CurrentHealth <= 0)
         {
-            gameObject.SetActive(false);
+            this.transform.parent.gameObject.SetActive(false);
         }
     }
-
-    void Update()
+    //Uppdates the display
+    void update_health()
     {
         for (int i = 0; i < hearts.Length; i++)
         {
-            if (i < CurrentHealth)
+            if (i < Stats_Manager.Instance.CurrentHealth)
             {
                 hearts[i].sprite = FullHeart;
             }
@@ -34,7 +32,7 @@ public class Player_Health : MonoBehaviour
                 hearts[i].sprite = EmptyHeart;
             }
 
-            if (i < MaxHealth)
+            if (i < Stats_Manager.Instance.MaxHealth)
             {
                 hearts[i].enabled = true;
             }
@@ -44,27 +42,9 @@ public class Player_Health : MonoBehaviour
             }
         }
     }
-    void OnDisable()
+    //fire the function on start of game
+    void Start()
     {
-        for (int i = 0; i < hearts.Length; i++)
-        {
-            if (i < CurrentHealth)
-            {
-                hearts[i].sprite = FullHeart;
-            }
-            else
-            {
-                hearts[i].sprite = EmptyHeart;
-            }
-
-            if (i < MaxHealth)
-            {
-                hearts[i].enabled = true;
-            }
-            else
-            {
-                hearts[i].enabled = false;
-            }
-        }
+        update_health();
     }
 }
