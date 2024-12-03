@@ -207,6 +207,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca7587ba960ad7ba283fd47fd7f40e9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CurrentHealth: 5
+  MaxHealth: 5
   EmptyHeart: {fileID: -705465144167411356, guid: 658bda33c8899404ea8ad3563607bcdd, type: 3}
   FullHeart: {fileID: 2350297403280568894, guid: b9b1712a07080c332ae6e772b2d92355, type: 3}
   hearts:
@@ -295,9 +297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8ac5fb2281436a9a9ffa9c06ac086b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FacingDirection: 1
-  rb: {fileID: 0}
-  animator: {fileID: 0}
+  speed: 50
 --- !u!114 &8157969
 MonoBehaviour:
   m_ObjectHideFlags: 0
