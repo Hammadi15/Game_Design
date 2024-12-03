@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6961265731521274993}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AttackPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8587654479676921799}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DetectionPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 8496547593304601323}
   - component: {fileID: 4993326294566135574}
   - component: {fileID: 1729680879871279065}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Torch_Goblin
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -235,7 +235,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 1
   AttackPoint: {fileID: 6961265731521274993}
-  WeaponRange: 0.6
+  WeaponRange: 0.7
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 1
-  AttackRange: 0.6
+  AttackRange: 0.7
   AttackCoolDown: 2
   playerDetectRange: 4
   DetectionPoint: {fileID: 8587654479676921799}
