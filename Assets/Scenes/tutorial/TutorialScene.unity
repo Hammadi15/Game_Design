@@ -13639,7 +13639,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
-<<<<<<< HEAD:Assets/Scenes/jack_TutorialScene.unity
 --- !u!1 &803296719
 GameObject:
   m_ObjectHideFlags: 0
@@ -13995,11 +13994,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 977750723}
-=======
 --- !u!1001 &861086516
 PrefabInstance:
   m_ObjectHideFlags: 0
->>>>>>> origin/Eoxys-Branch:Assets/Scenes/tutorial/TutorialScene.unity
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
@@ -14093,7 +14090,6 @@ PrefabInstance:
 --- !u!1001 &879847940
 PrefabInstance:
   m_ObjectHideFlags: 0
-<<<<<<< HEAD:Assets/Scenes/jack_TutorialScene.unity
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -14416,8 +14412,6 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1559335100}
-=======
->>>>>>> origin/Eoxys-Branch:Assets/Scenes/tutorial/TutorialScene.unity
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
@@ -18130,9 +18124,6 @@ SceneRoots:
   - {fileID: 879847940}
   - {fileID: 492970436}
   - {fileID: 774278241}
-<<<<<<< HEAD:Assets/Scenes/jack_TutorialScene.unity
   - {fileID: 1559335103}
   - {fileID: 977750730}
   - {fileID: 803296722}
-=======
->>>>>>> origin/Eoxys-Branch:Assets/Scenes/tutorial/TutorialScene.unity
