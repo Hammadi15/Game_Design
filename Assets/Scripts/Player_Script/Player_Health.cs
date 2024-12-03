@@ -12,14 +12,14 @@ public class Player_Health : MonoBehaviour
     {
         //Takes current health adds it and sets current helth to be minus the added number
         Stats_Manager.Instance.CurrentHealth -= amount;
-        update_health();
+        Update_health();
         if (Stats_Manager.Instance.CurrentHealth <= 0)
         {
             this.transform.parent.gameObject.SetActive(false);
         }
     }
     //Uppdates the display
-    void update_health()
+    void Update_health()
     {
         for (int i = 0; i < hearts.Length; i++)
         {
@@ -45,6 +45,6 @@ public class Player_Health : MonoBehaviour
     //fire the function on start of game
     void Start()
     {
-        update_health();
+        Update_health();
     }
 }
