@@ -865,6 +865,7 @@ GameObject:
   m_Component:
   - component: {fileID: 422937559}
   - component: {fileID: 422937558}
+  - component: {fileID: 422937560}
   m_Layer: 0
   m_Name: Grid
   m_TagString: Untagged
@@ -15991,12 +15992,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1002042306}
-  - component: {fileID: 1002042305}
-  - component: {fileID: 1002042308}
-  - component: {fileID: 1002042307}
+  - component: {fileID: 1327922822}
   m_Layer: 0
-  m_Name: PlayerCamera
+  m_Name: spawn_point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16051,14 +16049,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1002042304}
+  m_GameObject: {fileID: 1327922821}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8.12, y: -11.27, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 422937559}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1002042307
 MonoBehaviour:
