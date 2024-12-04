@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StartMenu : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class StartMenu : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        Doormgr.Instance.Switched_area(SceneManager.GetActiveScene(), SceneManager.GetActiveScene());
     }
 
     // Update is called once per frame

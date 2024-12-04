@@ -29,7 +29,6 @@ public class Doormgr : MonoBehaviour
         Door_pointer door_pointer = grid.GetComponent<Door_pointer>();
         Vector3 spawn = door_pointer.Spawn_point.transform.position;
         player.transform.position = new Vector3(spawn.x, spawn.y, spawn.z);
-        player_camera.transform.position = new Vector3(spawn.x, spawn.y, spawn.z);
         PolygonCollider2D PolygonCollider = door_pointer.Camera_Collider.GetComponent<PolygonCollider2D>();
         CinemachineConfiner2D CinemachineConfiner= player_camera.GetComponent<CinemachineConfiner2D>();
         CinemachineConfiner.BoundingShape2D = PolygonCollider;

@@ -38,4 +38,15 @@ public class SoundManager : MonoBehaviour
         // Play the provided AudioClip once, without interrupting currently playing sounds.
         source.PlayOneShot(_sound);
     }
+
+    // Add this method to change the background music.
+    public void ChangeBackgroundMusic(AudioClip newMusic)
+    {
+        if (source.clip != newMusic) // Avoid restarting if the music is already playing.
+        {
+            source.clip = newMusic; // Set the new music clip.
+            source.loop = true;    // Enable looping.
+            source.Play(); // Play the new music.
+        }
+    }
 }
