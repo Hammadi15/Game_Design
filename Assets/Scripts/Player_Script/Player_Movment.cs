@@ -11,7 +11,7 @@ public class Player_Movment : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!enabled_move) return
+        if (!enabled_move) return;
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
