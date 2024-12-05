@@ -9,6 +9,7 @@ public class PlayerAimAndShoot : MonoBehaviour
     [SerializeField] private Transform bulletSpwanPoint;
     [SerializeField] private float shootCooldown = 0.5f; // Cooldown duration in seconds
     private bool isFiring = false; // Tracks if the player is holding the fire button
+    [SerializeField] private AudioClip shootSound;
 
     private float timer = 0f; // Tracks cooldown time
     private bool isActive = true; // Tracks if the bow is currently active
@@ -54,6 +55,7 @@ public class PlayerAimAndShoot : MonoBehaviour
             // Spawn bullet
             Instantiate(bullet, bulletSpwanPoint.position, gun.transform.rotation);
             timer = shootCooldown;
+            SoundManager.instance.PlaySound(shootSound);
         }
     }
 

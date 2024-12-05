@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class BulletBehavior : MonoBehaviour
@@ -8,15 +9,15 @@ public class BulletBehavior : MonoBehaviour
 
     [Header ("Normal Bullet Stats")]
     [SerializeField] private float normalBulletSpeed = 15f; //bullet speed
-    [SerializeField] private float normalBulletDamage = 1f;
+    [SerializeField] private int normalBulletDamage = 1;
 
     [Header("Physics Bullet stats")]
     [SerializeField] private float physicsBulletSpeed = 17.5f;
     [SerializeField] private float physicsBulletGravity = 3f;
-    [SerializeField] private float physicsBulletDamage = 2f;
+    [SerializeField] private int physicsBulletDamage = 2;
 
     private Rigidbody2D rb;
-    private float damage;
+    private int damage;
     public enum BulletType
     {
         Normal,
@@ -63,10 +64,10 @@ public class BulletBehavior : MonoBehaviour
         if ((whatDestroysBullet.value & (1 << collision.gameObject.layer)) >0)
             {
             //where we will add Damage Enemy
-            IDamage iDamage = collision.gameObject.GetComponent<IDamage>();
+            Enemy_Health iDamage = collision.gameObject.GetComponent<Enemy_Health>();
             if (iDamage != null)
             {
-                iDamage.Damage(damage);
+                iDamage.ChangeHealth(damage);
 
             }
             Destroy(gameObject);
