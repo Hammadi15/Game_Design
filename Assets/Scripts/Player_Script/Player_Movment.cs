@@ -7,9 +7,11 @@ public class Player_Movment : MonoBehaviour
     public int FacingDirection = 1;
     public Rigidbody2D rb;
     public Animator animator;
+    public bool enabled_move;
 
     void FixedUpdate()
     {
+        if (!enabled_move) return;
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
@@ -54,6 +56,18 @@ public class Player_Movment : MonoBehaviour
         else
         {
             animator.SetBool("IsWalking", false);
+        if (movement.x != 0 || movement.y != 0)
+        {
+
+            animator.SetFloat("X", movement.x);
+            animator.SetFloat("Y", movement.y);
+
+                animator.SetBool("IsWalking", true);
+            }
+            else
+            {
+                animator.SetBool("IsWalking", false);
+            }
         }
     }
 

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8321437945793825572}
-  - component: {fileID: 6939435119409858012}
+  - component: {fileID: 498620192110287128}
   m_Layer: 0
   m_Name: GameObject(Sword)
   m_TagString: Untagged
@@ -33,7 +33,7 @@ Transform:
   - {fileID: 2552543029666209928}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6939435119409858012
+--- !u!114 &498620192110287128
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,11 +42,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4421075175096143474}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd4c60be078cc35419e9dba2ec3ba2f2, type: 3}
+  m_Script: {fileID: 11500000, guid: a80cb590594202544a90c7d8d2b815d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attack: {fileID: -4141559924220461711, guid: ec752f6c397fd8d46afbbe7b7998d3c3, type: 3}
-  pointerPositon: {fileID: 5568386911938997224, guid: ec752f6c397fd8d46afbbe7b7998d3c3, type: 3}
+  attack: {fileID: -4141559924220461711, guid: 7e26d548ee400c643b34fb85c639c9b2, type: 3}
+  pointerPositon: {fileID: 0}
 --- !u!1 &6693451079804566680
 GameObject:
   m_ObjectHideFlags: 0
@@ -75,13 +75,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6693451079804566680}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.52, y: 0.25051212, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_LocalRotation: {x: -0, y: 0, z: -0.9181353, w: -0.39626715}
+  m_LocalPosition: {x: 0.06, y: 1.05, z: 0}
+  m_LocalScale: {x: 4.2, y: 4.3, z: 4.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8321437945793825572}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 493.31}
 --- !u!212 &5644543970455181307
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -125,7 +125,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 712035800519618848, guid: f20a8fe0a3ee2bc40a7cc9f9b7592356, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -134,7 +134,7 @@ SpriteRenderer:
   m_Size: {x: 1.125, y: 0.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &433354858734982810
@@ -147,7 +147,7 @@ Animator:
   m_GameObject: {fileID: 6693451079804566680}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a402079e0c8900549b093899909bf6c8, type: 2}
+  m_Controller: {fileID: 9100000, guid: 06a5f2bb5f778844a92110cd841dc362, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6693451079804566680}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2b0c838b048d964f97cc8367a8b21d5, type: 3}
+  m_Script: {fileID: 11500000, guid: 69d15c8741f7ea547953d4a8e8593319, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &746980909812272952
@@ -180,6 +180,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6693451079804566680}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19d9b8588ff0af4a1a91ebc31389392c, type: 3}
+  m_Script: {fileID: 11500000, guid: 28e8ffafb1ca3e449b645e0515ab9f42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

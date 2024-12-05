@@ -7,6 +7,8 @@ public class Enemy_Health : MonoBehaviour
     public delegate void MonsterDefeated(int exp);
     public static event MonsterDefeated OnMonsterDefeated;
 
+    [SerializeField] private AudioClip deathSound;
+
     public int CurrentHealth;
     public int MaxHealth;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -28,6 +30,7 @@ public class Enemy_Health : MonoBehaviour
         {
             OnMonsterDefeated(ExperienceReward);
             Destroy(gameObject);
+            SoundManager.instance.PlaySound(deathSound);
 
         }
     }

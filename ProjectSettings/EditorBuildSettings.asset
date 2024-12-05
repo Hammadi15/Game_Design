@@ -6,11 +6,20 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/tutorial/TutorialScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Scenes/tutorial/jack_TutorialScene.unity
+    guid: a31b54292eb40d146aa764011c990a31
   - enabled: 1
-    path: Assets/Scenes/Caves/Map_Building.unity
+    path: Assets/Scenes/Caves/jack_Map_Building.unity
     guid: c55950934bce0a344b870341d9c344fe
+  - enabled: 1
+    path: Assets/Scenes/Boss_Room/jack_Boss_Room.unity
+    guid: f12f5bfd70ff88a45a7971e6a8bd97f9
+  - enabled: 1
+    path: Assets/Scenes/temp_scene_for_reload.unity
+    guid: a5b06cf108bd82940a1ef9bf7fa784cb
+  - enabled: 1
+    path: Assets/Scenes/jack_dontdestroy.unity
+    guid: e21cc9a64f936dc428166b8366343777
   m_configObjects:
-    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 7e26d548ee400c643b34fb85c639c9b2, type: 3}
   m_UseUCBPForAssetBundles: 0
