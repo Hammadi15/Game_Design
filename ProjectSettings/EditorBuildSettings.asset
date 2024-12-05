@@ -21,5 +21,5 @@ EditorBuildSettings:
     path: Assets/Scenes/jack_dontdestroy.unity
     guid: e21cc9a64f936dc428166b8366343777
   m_configObjects:
-    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 7e26d548ee400c643b34fb85c639c9b2, type: 3}
   m_UseUCBPForAssetBundles: 0
