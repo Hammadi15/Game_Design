@@ -25,7 +25,7 @@ public class Enemy_Movement : MonoBehaviour
     // set the fasing direction
     private int FacingDirection = -1;
     //Keeps trak of current state(animation)
-    private EnemyState enemyState;
+    private BossState enemyState;
 
     //Defines the Rigidbody2D is being used
     private Rigidbody2D rb;
@@ -45,7 +45,7 @@ public class Enemy_Movement : MonoBehaviour
         animate = GetComponent<Animator>();
 
         //Changes animation stat to Idle in the begining
-        ChangeState(EnemyState.Idle);
+        ChangeState(BossState.Idle);
     }
 
     // Update is called once per frame
@@ -62,13 +62,13 @@ public class Enemy_Movement : MonoBehaviour
         }
 
         //Checking witch state the enemy is in, if it is moving then run the code inside
-        if (enemyState == EnemyState.Moving)
+        if (enemyState == BossState.Moving)
         {
             //calling the moving funtion
             moving();
         }
         //if the gameObject is not moving then check if it is attaking, if it is run the code inside
-        else if (enemyState == EnemyState.Attacking)
+        else if (enemyState == BossState.Attacking)
         {
             //This is where we do the attack... stuff
 
@@ -119,12 +119,12 @@ public class Enemy_Movement : MonoBehaviour
                 AttackCoolDownTimer = AttackCoolDown;
 
                 //change the state of animation to the Attacking animation of the gameObject
-                ChangeState(EnemyState.Attacking);
+                ChangeState(BossState.Attacking);
             }
             else if (Vector2.Distance(transform.position, player.position) > AttackRange)
             {
                 //change the state of animation to the Moving animation of the gameObject
-                ChangeState(EnemyState.Moving);
+                ChangeState(BossState.Moving);
             }
         }
         else
@@ -132,7 +132,7 @@ public class Enemy_Movement : MonoBehaviour
             //sets the speed of the Assiged body to zero.
             rb.linearVelocity = Vector2.zero;
             //change the state of animation to the Idle animation of the gameObject
-            ChangeState(EnemyState.Idle);
+            ChangeState(BossState.Idle);
         }
     }
     //This code could be used but the code above is more streamlined
@@ -165,22 +165,22 @@ private void OnTriggerExit2D(Collider2D collision)
     }
 }*/
 
-    void ChangeState(EnemyState NewState)
+    void ChangeState(BossState NewState)
     {
         //Exiting the current animation
-        if (enemyState == EnemyState.Idle)
+        if (enemyState == BossState.Idle)
         {
             //Set bool in animator to false
             animate.SetBool("IsIdle", false);
         }
 
-        else if (enemyState == EnemyState.Moving)
+        else if (enemyState == BossState.Moving)
         {
             //Set bool in animator to false
             animate.SetBool("IsMoving", false);
         }
 
-        else if (enemyState == EnemyState.Attacking)
+        else if (enemyState == BossState.Attacking)
         {
             //Set bool in animator to false
             animate.SetBool("IsAttacking", false);
@@ -190,19 +190,19 @@ private void OnTriggerExit2D(Collider2D collision)
         enemyState = NewState;
 
         //Uppdate our new animation
-        if (enemyState == EnemyState.Idle)
+        if (enemyState == BossState.Idle)
         {
             //Set bool in animator to true
             animate.SetBool("IsIdle", true);
         }
 
-        else if (enemyState == EnemyState.Moving)
+        else if (enemyState == BossState.Moving)
         {
             //Set bool in animator to true
             animate.SetBool("IsMoving", true);
         }
 
-        else if (enemyState == EnemyState.Attacking)
+        else if (enemyState == BossState.Attacking)
         {
             //Set bool in animator to true
             animate.SetBool("IsAttacking", true);
@@ -221,7 +221,7 @@ private void OnTriggerExit2D(Collider2D collision)
 }
 
 // creating states for character
-public enum EnemyState
+public enum BossState
 {
     Idle,
     Moving,
