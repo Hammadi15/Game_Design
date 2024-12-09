@@ -32,8 +32,8 @@
   <h3>Steps to run the project:</h3>
   <p><strong>1. Clone the repository:</strong></p>
    <p>```bash</p>
-   <p>git clone https://github.com/username/repository-name.git</p>
-   <p>cd repository-name</p>
+   <p>git clone https://github.com/Hammadi15/Game_Design.git</p>
+   <p>cd Game_Design</p>
   <br>
   <p><strong>2. Open the project in Unity Hub:</strong></p>
     <p>Launch Unity Hub.</p>
