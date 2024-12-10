@@ -12,7 +12,7 @@
 
 <h2>Features</h2>
 <div>
-  <p>- Variety of weapons for combat, such as sword and crossbow</p>
+  <p>- Variety of weapons for combat, such as sword and bow</p>
   <p>- Fully animated characters and diverse environments.</p>
   <p>- Progressive reward system.</p>
   <p>- Audio and light effects.</p>
@@ -48,7 +48,7 @@
 <div>
   <p>- <strong>W/A/S/D:</strong> Move</p>
   <p>- <strong>Left Mouse Button:</strong> Attack</p>
-  <p>- <strong>Esc:</strong> View stats</p>
+  <p>- <strong>E:</strong> View stats</p>
   <p>- <strong>1/2:</strong> Switch weapons</p>
   <br>
 </div>
