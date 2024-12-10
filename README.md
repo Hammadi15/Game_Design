@@ -13,7 +13,7 @@
 <h2>Features</h2>
 <div>
   <p>- Variety of weapons for combat, such as sword and crossbow</p>
-  <p>- Fully animated characters and environments.</p>
+  <p>- Fully animated characters and diverse environments.</p>
   <p>- Progressive reward system.</p>
   <p>- Audio and light effects.</p>
   <br>
