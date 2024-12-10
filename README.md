@@ -12,10 +12,10 @@
 
 <h2>Features</h2>
 <div>
-  <p>- Dynamic gameplay mechanics, such as shooting and sword-fighting</p>
+  <p>- Variety of weapons for combat, such as sword and crossbow</p>
   <p>- Fully animated characters and environments.</p>
-  <p>- Interactive UI with start and pause menus.</p>
-  <p>- Audio effects and background music.</p>
+  <p>- Progressive reward system.</p>
+  <p>- Audio and light effects.</p>
   <br>
 </div>
 
