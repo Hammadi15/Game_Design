@@ -16,7 +16,6 @@
   <p>- Fully animated characters and environments.</p>
   <p>- Interactive UI with start and pause menus.</p>
   <p>- Audio effects and background music.</p>
-  <p>- Level up after a certain number of eliminations.</p>
   <br>
 </div>
 
