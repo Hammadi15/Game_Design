@@ -37,9 +37,9 @@ public class Sword_Weapon : MonoBehaviour
         isFiring = true;
         if (canAttack)
         {
-            StartCoroutine(AttackWithCooldown());    
+            StartCoroutine(AttackWithCooldown());
         }
-            
+
     }
 
     private void StopFiring()

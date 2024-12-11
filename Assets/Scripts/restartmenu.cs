@@ -10,7 +10,7 @@ public class RestartMenu : MonoBehaviour
         gameObject.SetActive(false);
         player.SetActive(true);
         Experience_Manager.Instance.reset_all();
-        Stats_Manager.Instance.CurrentHealth = Stats_Manager.Instance.MaxHealth;
+        Stats_Manager.Instance.Restart();
         player.GetComponentInChildren<Player_Health>().ChangeHealth(0);
         if (SceneManager.GetActiveScene().name != Restart_to.name)
         {
@@ -20,6 +20,11 @@ public class RestartMenu : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
+    }
+
+    public void Quit_but()
+    {
+        Application.Quit();
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

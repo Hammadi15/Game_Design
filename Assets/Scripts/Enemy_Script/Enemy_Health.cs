@@ -31,6 +31,7 @@ public class Enemy_Health : MonoBehaviour
             OnMonsterDefeated(ExperienceReward);
             Destroy(gameObject);
             SoundManager.instance.PlaySound(deathSound);
+            Enemy_manager.Instance.enemy_count -= 1;
 
         }
     }

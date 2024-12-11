@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4702123679773328191}
   - component: {fileID: 920441639844350475}
   - component: {fileID: 1377141520584093466}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,11 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatDestroysBullet:
     serializedVersion: 2
-    m_Bits: 1280
+    m_Bits: 264
   destoryTime: 3
-  normalBulletSpeed: 20
-  normalBulletDamage: 1
-  physicsBulletSpeed: 7
-  physicsBulletGravity: 3
-  physicsBulletDamage: 2
-  bulletType: 1
+  normalBulletSpeed: 10
+  hitSound: {fileID: 8300000, guid: 314104014ed7fa5409d3c3a099aa98ef, type: 3}

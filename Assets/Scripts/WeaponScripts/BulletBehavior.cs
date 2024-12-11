@@ -7,24 +7,11 @@ public class BulletBehavior : MonoBehaviour
     [SerializeField] private LayerMask whatDestroysBullet;
     [SerializeField] private float destoryTime = 3f; //Destoy time 
 
-    [Header ("Normal Bullet Stats")]
+    [Header("Normal Bullet Stats")]
     [SerializeField] private float normalBulletSpeed = 15f; //bullet speed
-    [SerializeField] private int normalBulletDamage = 1;
-
-    [Header("Physics Bullet stats")]
-    [SerializeField] private float physicsBulletSpeed = 17.5f;
-    [SerializeField] private float physicsBulletGravity = 3f;
-    [SerializeField] private int physicsBulletDamage = 2;
+    [SerializeField] private AudioClip hitSound;
 
     private Rigidbody2D rb;
-    private int damage;
-    public enum BulletType
-    {
-        Normal,
-        Physics
-    }
-
-    public BulletType bulletType;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -36,66 +23,34 @@ public class BulletBehavior : MonoBehaviour
 
     }
 
-    private void FixedUpdate()
-    {
-        if (bulletType == BulletType.Physics)
-        {
-            //rotate bullet in direction of velocity
-            transform.right = rb.linearVelocity;
-        }
-    }
     public void InitializeBulletStats()
     {
-        if (bulletType == BulletType.Normal)
-        {
-            SetStraightVelocity();
-            damage = normalBulletDamage;
-        }
-        else if (bulletType == BulletType.Physics)
-        {
-            SetPhysicsVelocity();
-            damage = physicsBulletDamage;
-        }
+        SetStraightVelocity();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        SoundManager.instance.PlaySound(hitSound);
         //is the collision within the whatDestroysBullet layermask
-        if ((whatDestroysBullet.value & (1 << collision.gameObject.layer)) >0)
-            {
+        if ((whatDestroysBullet.value & (1 << collision.gameObject.layer)) > 0)
+        {
             //where we will add Damage Enemy
             Enemy_Health iDamage = collision.gameObject.GetComponent<Enemy_Health>();
             if (iDamage != null)
             {
-                iDamage.ChangeHealth(damage);
+                iDamage.ChangeHealth(Stats_Manager.Instance.Bow_Damage);
 
             }
             Destroy(gameObject);
         }
     }
 
-    private void SetPhysicsVelocity()
-    {
-        rb.linearVelocity = transform.right * physicsBulletSpeed;
-    }
     private void SetStraightVelocity() //created function for speed
     {
-        rb.linearVelocity = transform.right * physicsBulletSpeed; //speed which takes veclocity which is 15 and times it on right side
+        rb.linearVelocity = transform.right * normalBulletSpeed; //speed which takes veclocity which is 15 and times it on right side
     }
     private void SetDestoryTimer() // function
     {
         Destroy(gameObject, destoryTime);
-    }
-
-    private void SetRBStats()
-    {
-        if (bulletType == BulletType.Normal)
-        {
-            rb.gravityScale = 0f;
-        }
-        else if (bulletType == BulletType.Physics)
-        {
-            rb.gravityScale = physicsBulletGravity;
-        }
     }
 }
