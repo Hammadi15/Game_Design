@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEngine.AI;
 public class Enemy_Movement : MonoBehaviour
 {
     //Make it posible to change the speed of witch the enemy moves
@@ -35,7 +35,7 @@ public class Enemy_Movement : MonoBehaviour
 
     //Defines the Animator is being used
     private Animator animate;
-
+    private NavMeshAgent agent;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -43,13 +43,15 @@ public class Enemy_Movement : MonoBehaviour
         //Getting components from the called components and adding them in to there respective calls
         rb = GetComponent<Rigidbody2D>();
         animate = GetComponent<Animator>();
-
+        agent = GetComponent<NavMeshAgent>();
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
         //Changes animation stat to Idle in the begining
         ChangeState(EnemyState.Idle);
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         //checking for the player
         CheckForPlayer();
@@ -73,7 +75,7 @@ public class Enemy_Movement : MonoBehaviour
             //This is where we do the attack... stuff
 
             //when we are attacking and have attacked set the velocetyu of the gameObject to zero
-            rb.linearVelocity = Vector2.zero;
+            agent.isStopped = true;
         }
     }
 
@@ -88,8 +90,8 @@ public class Enemy_Movement : MonoBehaviour
         }
 
         //Sets what it is the track and the spped of which it moves 
-        Vector2 Direction = (player.position - transform.position).normalized;
-        rb.linearVelocity = Direction * Speed;
+        agent.isStopped = false;
+        agent.SetDestination(player.position + new Vector3(0.6f * -FacingDirection, 0, 0));
     }
 
 
@@ -130,7 +132,7 @@ public class Enemy_Movement : MonoBehaviour
         else
         {
             //sets the speed of the Assiged body to zero.
-            rb.linearVelocity = Vector2.zero;
+            agent.isStopped = true;
             //change the state of animation to the Idle animation of the gameObject
             ChangeState(EnemyState.Idle);
         }
