@@ -8,6 +8,7 @@ public class ActiveInventory : MonoBehaviour
 
     // Reference to WeaponManager
     [SerializeField] private WeaponManager weaponManager;
+    private Sword_Weapon sword_weapon;
 
     private void Awake()
     {
@@ -16,6 +17,7 @@ public class ActiveInventory : MonoBehaviour
 
     private void Start()
     {
+        sword_weapon = weaponManager.weapons[1].GetComponentInChildren<Sword_Weapon>();
         // Assigns keyboard input to toggle slots
         pointer.Inventory.Keyboard.performed += ctx => ToggleActiveSlot((int)ctx.ReadValue<float>());
     }
@@ -27,6 +29,7 @@ public class ActiveInventory : MonoBehaviour
 
     private void ToggleActiveSlot(int numValue)
     {
+        if (!sword_weapon.canAttack) { Debug.Log("test"); return; };
         // Convert input to 0-based index
         int indexNum = numValue - 1;
 
