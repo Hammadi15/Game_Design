@@ -29,7 +29,7 @@ public class ActiveInventory : MonoBehaviour
 
     private void ToggleActiveSlot(int numValue)
     {
-        if (!sword_weapon.canAttack) { Debug.Log("test"); return; };
+        if (!sword_weapon.canAttack) { return; };
         // Convert input to 0-based index
         int indexNum = numValue - 1;
 
