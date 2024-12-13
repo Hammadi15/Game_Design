@@ -27,4 +27,13 @@ public class Enemy_Combat : MonoBehaviour
             hits[0].GetComponent<Player_Health>().ChangeHealth(Damage); ;
         }
     }
+    //This function draws up the visulizesion of the aggro range
+    private void OnDrawGizmosSelected()
+    {
+        //sets the color to white
+        Gizmos.color = Color.green;
+        //Sets the position of where it is going to show on the position of DetectionPoint, and making the radius be the playerDetectRange
+        Gizmos.DrawWireSphere(AttackPoint.position, WeaponRange);
+
+    }
 }
