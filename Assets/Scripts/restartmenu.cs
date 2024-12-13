@@ -12,6 +12,7 @@ public class RestartMenu : MonoBehaviour
         Experience_Manager.Instance.reset_all();
         Stats_Manager.Instance.Restart();
         player.GetComponentInChildren<Player_Health>().ChangeHealth(0);
+        player.GetComponentInChildren<PlayerAimAndShoot>().BulletCount = 10;
         if (SceneManager.GetActiveScene().name != Restart_to.name)
         {
             SceneManager.LoadScene(Restart_to.name);
@@ -26,15 +27,5 @@ public class RestartMenu : MonoBehaviour
     {
         Application.Quit();
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

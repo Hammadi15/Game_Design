@@ -6,7 +6,8 @@ public class StartMenu : MonoBehaviour
     public GameObject player;
     public GameObject bow;
     public GameObject inventory_UI;
-    public bool IDoNotGiveARatBullOfThisShit;
+    public GameObject Arrow_Enemy_Count_UI;
+    public bool IDoNotGiveARatBullOfThisShit = false;
     public static StartMenu Instance;
     private void Awake()
     {
@@ -37,12 +38,15 @@ public class StartMenu : MonoBehaviour
         bow.GetComponent<PlayerAimAndShoot>().isActive = true;
         Player_Movment pm = player.GetComponent<Player_Movment>();
         pm.enabled_move = true;
-        CanvasGroup temp_CanvasGroup = inventory_UI.GetComponent<CanvasGroup>();
-        temp_CanvasGroup.alpha = 1;
-        temp_CanvasGroup.interactable = true;
-        temp_CanvasGroup.blocksRaycasts = true;
+        CanvasGroup inventory_UI_CanvasGroup = inventory_UI.GetComponent<CanvasGroup>();
+        inventory_UI_CanvasGroup.alpha = 1;
+        inventory_UI_CanvasGroup.interactable = true;
+        inventory_UI_CanvasGroup.blocksRaycasts = true;
         Stats_Manager.Instance.done_tutorial = true;
-
+        CanvasGroup Arrow_Enemy_Count_UI_CanvasGroup = Arrow_Enemy_Count_UI.GetComponent<CanvasGroup>();
+        Arrow_Enemy_Count_UI_CanvasGroup.alpha = 1;
+        Arrow_Enemy_Count_UI_CanvasGroup.interactable = true;
+        Arrow_Enemy_Count_UI_CanvasGroup.blocksRaycasts = true;
     }
     public void Quit_but()
     {
@@ -56,9 +60,4 @@ public class StartMenu : MonoBehaviour
         Doormgr.Instance.Switched_area(SceneManager.GetActiveScene(), SceneManager.GetActiveScene());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

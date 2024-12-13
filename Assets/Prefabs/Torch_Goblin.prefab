@@ -79,7 +79,7 @@ GameObject:
   - component: {fileID: 4993326294566135574}
   - component: {fileID: 1729680879871279065}
   - component: {fileID: 6352257199603960030}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Torch_Goblin
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -261,11 +261,6 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
-  snagLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  ray_scale: 2
-  ray_forw_scale: 2
 --- !u!95 &4993326294566135574
 Animator:
   serializedVersion: 7

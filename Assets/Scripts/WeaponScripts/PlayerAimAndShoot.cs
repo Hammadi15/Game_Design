@@ -1,4 +1,5 @@
 
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,7 +11,7 @@ public class PlayerAimAndShoot : MonoBehaviour
     [SerializeField] private float shootCooldown = 0.5f; // Cooldown duration in seconds
     [SerializeField] private AudioClip shootSound;
 
-    public int BulletCount = 0;
+    public int BulletCount = 10;
     private float timer = 0f; // Tracks cooldown time
     public bool isActive = false; // Tracks if the bow is currently active
 
@@ -25,6 +26,7 @@ public class PlayerAimAndShoot : MonoBehaviour
         HandleGunRotation();
         HandleGunShooting();
         UpdateCooldownTimer();
+        BulletCount = math.min(BulletCount, 10);
     }
 
     private void HandleGunRotation()
@@ -52,9 +54,9 @@ public class PlayerAimAndShoot : MonoBehaviour
     {
 
         // Check if the fire button is held down
-        if (Mouse.current.leftButton.isPressed && timer <= 0f && BulletCount < 10)
+        if (Mouse.current.leftButton.isPressed && timer <= 0f && BulletCount > 0)
         {
-            BulletCount++;
+            BulletCount--;
             // Spawn bullet
             Instantiate(Bullet, bulletSpwanPoint.position, gun.transform.rotation);
             timer = shootCooldown;

@@ -689,10 +689,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gun: {fileID: 5508894449531148653}
-  bullet: {fileID: 8498205619809717754, guid: 89cf37c9707926542b0529ecdeb970d2, type: 3}
+  Bullet: {fileID: 0}
   bulletSpwanPoint: {fileID: 2504193064039357400}
   shootCooldown: 0.5
   shootSound: {fileID: 8300000, guid: 360b04cf2256b0f479741248e5789e96, type: 3}
+  BulletCount: 10
   isActive: 0
 --- !u!1 &5791080064180258856
 GameObject:
