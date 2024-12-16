@@ -7,12 +7,19 @@ public class RestartMenu : MonoBehaviour
     public GameObject player;
     public void Restart_but()
     {
+        //disables the current game object
         gameObject.SetActive(false);
+        //enables the current game object
         player.SetActive(true);
+        //resets all xp and levels from the Experience_Manager
         Experience_Manager.Instance.reset_all();
+        //resets everything used by the player
         Stats_Manager.Instance.Restart();
+        //forces a reset of the players health UI
         player.GetComponentInChildren<Player_Health>().ChangeHealth(0);
+        //resets all of the arrows to the default value
         player.GetComponentInChildren<PlayerAimAndShoot>().BulletCount = 10;
+        //checks if the current scene isn't the scene that we are suppose to reset to and based on that loads the reset scene or tries to reload the current scene if it is the reset to scene
         if (SceneManager.GetActiveScene().name != Restart_to.name)
         {
             SceneManager.LoadScene(Restart_to.name);

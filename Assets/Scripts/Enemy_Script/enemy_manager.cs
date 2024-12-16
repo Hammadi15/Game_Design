@@ -21,6 +21,7 @@ public class Enemy_manager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //finds all GameObjects that has the tag "Enemy" and sets the enemy_count to the length the responds
         enemy_count = GameObject.FindGameObjectsWithTag("Enemy").Length;
     }
 
