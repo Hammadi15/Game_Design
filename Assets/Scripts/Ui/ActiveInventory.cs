@@ -25,7 +25,7 @@ public class ActiveInventory : MonoBehaviour
         pointer.Enable(); // Enables input system
     }
 
-    private void ToggleActiveSlot(int numValue)
+    public void ToggleActiveSlot(int numValue)
     {
         // Convert input to 0-based index
         int indexNum = numValue - 1;

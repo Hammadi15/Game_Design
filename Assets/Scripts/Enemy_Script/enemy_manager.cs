@@ -5,6 +5,8 @@ public class Enemy_manager : MonoBehaviour
     public int enemy_count;
     public GameObject door;
     public static Enemy_manager Instance;
+    public bool door_toggle;
+    private bool isdone = false;
     private void Awake()
     {
         if (Instance == null)
@@ -25,9 +27,17 @@ public class Enemy_manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (enemy_count <= 0)
+        if (enemy_count <= 0 && !isdone)
         {
-            door.SetActive(true);
+            isdone = true;
+            if (!door_toggle)
+            {
+                door.SetActive(true);
+            }
+            else
+            {
+                Dialog.Instance.Start_trig(true);
+            }
         }
     }
 }

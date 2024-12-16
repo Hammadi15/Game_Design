@@ -25,7 +25,7 @@ public class StartMenu : MonoBehaviour
         gameObject.SetActive(false);
         if (!IDoNotGiveARatBullOfThisShit)
         {
-            Dialog.Instance.Start_trig();
+            Dialog.Instance.Start_trig(false);
         }
         else
         {

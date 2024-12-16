@@ -17783,8 +17783,9 @@ MonoBehaviour:
     stats you must focus on your inner self (Press E to see stats)
   - Use your sword to slice the goblins (Left click) and bow to shoot them between
     the eye(left click). to change the wepons you must be strong (1; Bow 2; Sword)
-  - BE cearfull you only have a set amount of arrows that you can cearry(max 10 arrows
+  - Be cearfull, you only have a set amount of arrows that you can carry(max 10 arrows
     at any time)
+  - You must defeat all the goblin to callenge the boss.
   typingSpeed: -0.01
   continueButton: {fileID: 1334920366}
   Dialog_box_UI: {fileID: 1638757429}

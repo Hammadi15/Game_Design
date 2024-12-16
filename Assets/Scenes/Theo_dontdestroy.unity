@@ -2529,7 +2529,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: '
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2594,7 +2596,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -14.902008, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2832,7 +2834,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -3065,6 +3067,7 @@ GameObject:
   - component: {fileID: 1312591465}
   - component: {fileID: 1312591464}
   - component: {fileID: 1312591468}
+  - component: {fileID: 1312591469}
   m_Layer: 5
   m_Name: Start_UI
   m_TagString: Untagged
@@ -3168,6 +3171,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c8b4a4b220ffdc48a2c89d8a76018ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1312591469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312591462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fc15d91c8855d9e9b35a9e319891d48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  start_ui: {fileID: 1539494008}
+  restart_ui: {fileID: 80130805}
 --- !u!1 &1340493673
 GameObject:
   m_ObjectHideFlags: 0
@@ -4303,6 +4320,10 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 383900919}
+    - target: {fileID: 3622762068090722703, guid: 098bcfd084db2bd49b2aa916f875df1f, type: 3}
+      propertyPath: enabled_move
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4085967004547344543, guid: 098bcfd084db2bd49b2aa916f875df1f, type: 3}
       propertyPath: swordSound
       value: 
@@ -4431,10 +4452,6 @@ PrefabInstance:
       propertyPath: Bullet
       value: 
       objectReference: {fileID: 8498205619809717754, guid: 89cf37c9707926542b0529ecdeb970d2, type: 3}
-    - target: {fileID: 8477446708257246446, guid: 098bcfd084db2bd49b2aa916f875df1f, type: 3}
-      propertyPath: BulletCount
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 8959130411191791471, guid: 098bcfd084db2bd49b2aa916f875df1f, type: 3}
       propertyPath: m_Size.x
       value: 0.6634525
