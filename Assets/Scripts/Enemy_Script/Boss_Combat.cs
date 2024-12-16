@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Boss_Combat : MonoBehaviour
+public class Boss_Movement : MonoBehaviour
 {
     //Make it posible to change the speed of witch the enemy moves
     public float Speed;
@@ -31,10 +31,12 @@ public class Boss_Combat : MonoBehaviour
     private Rigidbody2D rb;
 
     //Defines the Transform object is being used
-    private Transform player;
+    public Transform player;
 
     //Defines the Animator is being used
     private Animator animate;
+
+    [SerializeField] private float JumpAttackRange;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -80,6 +82,7 @@ public class Boss_Combat : MonoBehaviour
     //Creating the moving funtion
     void moving()
     {
+        //new Vector2(player.position.x, player.position.y);
         //Tracs the players x position and if it is greater then the x position of the assined object, flip the ojects x scale to the outer direction
         if (player.position.x > transform.position.x && FacingDirection == -1 ||
            player.position.x < transform.position.x && FacingDirection == 1)
@@ -106,11 +109,8 @@ public class Boss_Combat : MonoBehaviour
     private void CheckForPlayer()
     {
         //checks if the gameObject that entered the circle collider2D is the player
-        Collider2D[] hits = Physics2D.OverlapCircleAll(DetectionPoint.position, playerDetectRange, playerLayer);
-
-        if (hits.Length > 0)
+        if (Vector2.Distance(DetectionPoint.position, player.position) <= playerDetectRange)
         {
-            player = hits[0].transform;
 
             //If the position of the player is closer or equal to the attack range and the AttackCoolDownTimer is zero then run the code inside
             if (Vector2.Distance(transform.position, player.transform.position) <= AttackRange && AttackCoolDownTimer <= 0)
@@ -135,35 +135,7 @@ public class Boss_Combat : MonoBehaviour
             ChangeState(BossState.Idle);
         }
     }
-    //This code could be used but the code above is more streamlined
-    /*  private void OnTriggerEnter2D(Collider2D collision)
 
-    //Checking if the gameObject that entered the Aggro range has the tag of Player
-    if (collision.gameObject.tag == "Player")
-    {
-        //If The Transformer has not bin assined yet, then assign it to the gameObject with tag Player
-        if (player == null)
-        {
-            player = collision.transform;
-        }
-        //changing animation state to moving
-        ChangeState(EnemyState.Moving);
-    }
-
-}
-//If the player is no longer inside of the aggro range this code is run
-private void OnTriggerExit2D(Collider2D collision)
-{
-    //Checking if the gameObject that left the Aggro range has the tag of Player
-    if (collision.gameObject.tag == "Player")
-    {
-        //sets the speed of the Assiged body to zero.
-        rb.linearVelocity = Vector2.zero;
-
-        //changing animation state to Idle
-        ChangeState(EnemyState.Idle);
-    }
-}*/
 
     void ChangeState(BossState NewState)
     {
@@ -217,7 +189,15 @@ private void OnTriggerExit2D(Collider2D collision)
         Gizmos.color = Color.white;
         //Sets the position of where it is going to show on the position of DetectionPoint, and making the radius be the playerDetectRange
         Gizmos.DrawWireSphere(DetectionPoint.position, playerDetectRange);
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(player.position, JumpAttackRange);
+
     }
+
+
+
+
 }
 
 // creating states for character
@@ -226,5 +206,6 @@ public enum BossnemyState
 {
     Idle,
     Moving,
-    Attacking
-} 
+    Attacking,
+    jumping
+}

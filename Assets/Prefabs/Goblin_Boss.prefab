@@ -235,7 +235,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 2
   AttackPoint: {fileID: 171891033431535569}
-  WeaponRange: 0.7
+  WeaponRange: 1.42
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -296,3 +296,5 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
+  player: {fileID: 0}
+  JumpAttackRange: 2
