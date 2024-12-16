@@ -42,5 +42,7 @@ public class Doormgr : MonoBehaviour
         CinemachineConfiner2D CinemachineConfiner = player_camera.GetComponent<CinemachineConfiner2D>();
         PolygonCollider2D PolygonCollider = door_pointer.Camera_Collider.GetComponent<PolygonCollider2D>();
         CinemachineConfiner.BoundingShape2D = PolygonCollider;
+        GameObject door = roots.First((obj) => { return obj.name == "door"; });
+        player.GetComponentInChildren<door_point>().door = door;
     }
 }

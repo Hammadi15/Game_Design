@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.AI;
+
 public class Boss_Combat : MonoBehaviour
 {
     //Make it posible to change the speed of witch the enemy moves
@@ -37,7 +37,7 @@ public class Boss_Combat : MonoBehaviour
     private Animator animate;
 
     [SerializeField] private float JumpAttackRange;
-    private NavMeshAgent agent;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -45,9 +45,6 @@ public class Boss_Combat : MonoBehaviour
         //Getting components from the called components and adding them in to there respective calls
         rb = GetComponent<Rigidbody2D>();
         animate = GetComponent<Animator>();
-        agent = GetComponent<NavMeshAgent>();
-        agent.updateRotation = false;
-        agent.updateUpAxis = false;
 
         //Changes animation stat to Idle in the begining
         ChangeState(BossState.Idle);
@@ -78,7 +75,7 @@ public class Boss_Combat : MonoBehaviour
             //This is where we do the attack... stuff
 
             //when we are attacking and have attacked set the velocetyu of the gameObject to zero
-            agent.isStopped = true;
+            rb.linearVelocity = Vector2.zero;
         }
     }
 
@@ -94,8 +91,8 @@ public class Boss_Combat : MonoBehaviour
         }
 
         //Sets what it is the track and the spped of which it moves 
-        agent.isStopped = false;
-        agent.SetDestination(player.position + new Vector3(0.6f * -FacingDirection, 0, 0));
+        Vector2 Direction = (player.position - transform.position).normalized;
+        rb.linearVelocity = Direction * Speed;
     }
 
 
@@ -133,7 +130,7 @@ public class Boss_Combat : MonoBehaviour
         else
         {
             //sets the speed of the Assiged body to zero.
-            agent.isStopped = true;
+            rb.linearVelocity = Vector2.zero;
             //change the state of animation to the Idle animation of the gameObject
             ChangeState(BossState.Idle);
         }
