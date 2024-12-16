@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class WeaponManager : MonoBehaviour
 {
-    [SerializeField] private GameObject[] weapons; // Array of weapon GameObjects
+    public GameObject[] weapons; // Array of weapon GameObjects
     [SerializeField] private int defaultWeaponIndex = 0; // The default weapon to equip at start
 
     private void Start()
