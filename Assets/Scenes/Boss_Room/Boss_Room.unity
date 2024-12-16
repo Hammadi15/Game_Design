@@ -16122,6 +16122,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Goblin_Boss
       objectReference: {fileID: 0}
+    - target: {fileID: 8861043577265665145, guid: 50225bb56555cbe4fae6e7276acfd014, type: 3}
+      propertyPath: MaxHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8861043577265665145, guid: 50225bb56555cbe4fae6e7276acfd014, type: 3}
+      propertyPath: CurrentHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8861043577265665145, guid: 50225bb56555cbe4fae6e7276acfd014, type: 3}
+      propertyPath: ExperienceReward
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9170859399637719888, guid: 50225bb56555cbe4fae6e7276acfd014, type: 3}
       propertyPath: m_LinearDamping
       value: 5
@@ -20403,6 +20415,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2126652997
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2126652998}
+  m_Layer: 0
+  m_Name: door
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2126652998
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126652997}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1946245505207040766
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20555,3 +20598,4 @@ SceneRoots:
   - {fileID: 1018712741}
   - {fileID: 222545003}
   - {fileID: 1028710921}
+  - {fileID: 2126652998}

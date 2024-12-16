@@ -19,7 +19,7 @@ public class ActiveInventory : MonoBehaviour
     {
         sword_weapon = weaponManager.weapons[1].GetComponentInChildren<Sword_Weapon>();
         // Assigns keyboard input to toggle slots
-        pointer.Inventory.Keyboard.performed += ctx => ToggleActiveSlot((int)ctx.ReadValue<float>());
+        pointer.Inventory.Keyboard.performed += ctx => ToggleActiveSlot((int)ctx.ReadValue<float>(), false);
     }
 
     private void OnEnable()
@@ -27,9 +27,9 @@ public class ActiveInventory : MonoBehaviour
         pointer.Enable(); // Enables input system
     }
 
-    public void ToggleActiveSlot(int numValue)
+    public void ToggleActiveSlot(int numValue, bool force)
     {
-        if (!sword_weapon.canAttack) { return; };
+        if (!sword_weapon.canAttack && !force) { return; };
         // Convert input to 0-based index
         int indexNum = numValue - 1;
 

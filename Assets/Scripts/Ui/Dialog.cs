@@ -105,7 +105,7 @@ public class Dialog : MonoBehaviour
                 restart_pointer rp = start_ui.GetComponent<restart_pointer>();
                 rp.restart_ui.SetActive(true);
                 RestartMenu rmenu = rp.restart_ui.GetComponent<RestartMenu>();
-                wpUI.GetComponentInChildren<ActiveInventory>().ToggleActiveSlot(1);
+                wpUI.GetComponentInChildren<ActiveInventory>().ToggleActiveSlot(1, true);
                 rmenu.Restart_but();
                 rp.start_ui.SetActive(true);
                 rp.start_ui.GetComponent<StartMenu>().bow.GetComponent<PlayerAimAndShoot>().isActive = false;

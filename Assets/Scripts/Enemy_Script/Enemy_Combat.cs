@@ -15,7 +15,7 @@ public class Enemy_Combat : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<Player_Health>().ChangeHealth(Damage);
+            collision.gameObject.GetComponentInChildren<Player_Health>().ChangeHealth(Damage);
         }
     }
 
@@ -25,7 +25,7 @@ public class Enemy_Combat : MonoBehaviour
 
         if (hits.Length > 0)
         {
-            hits[0].GetComponent<Player_Health>().ChangeHealth(Damage);
+            hits[0].GetComponentInChildren<Player_Health>().ChangeHealth(Damage);
             SoundManager.instance.PlaySound(hitSound);
         }
     }

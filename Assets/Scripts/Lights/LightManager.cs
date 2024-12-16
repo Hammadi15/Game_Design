@@ -33,15 +33,15 @@ public class LightManager : MonoBehaviour
         // Customize light properties based on the scene
         switch (scene.name) // Or you can use scene.buildIndex
         {
-            case "jack_TutorialScene": // Replace with your scene name
+            case "TutorialScene": // Replace with your scene name
                 playerLight.enabled = false;
                 break;
 
-            case "jack_Map_Building": // Replace with your scene name
+            case "Map_Building": // Replace with your scene name
                 playerLight.enabled = true;
                 break;
 
-            case "jack_Boss_Room": // Replace with your scene name
+            case "Boss_Room": // Replace with your scene name
                 playerLight.enabled = true;
                 break;
 

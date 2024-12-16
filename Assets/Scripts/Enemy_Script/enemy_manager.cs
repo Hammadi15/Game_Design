@@ -7,6 +7,7 @@ public class Enemy_manager : MonoBehaviour
     public static Enemy_manager Instance;
     public bool door_toggle;
     private bool isdone = false;
+    private GameObject pointer;
     private void Awake()
     {
         if (Instance == null)
@@ -21,6 +22,8 @@ public class Enemy_manager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        pointer = Doormgr.Instance.player.GetComponentInChildren<door_point>().gameObject;
+        pointer.SetActive(false);
         //finds all GameObjects that has the tag "Enemy" and sets the enemy_count to the length the responds
         enemy_count = GameObject.FindGameObjectsWithTag("Enemy").Length;
     }
@@ -34,6 +37,7 @@ public class Enemy_manager : MonoBehaviour
             if (!door_toggle)
             {
                 door.SetActive(true);
+                pointer.SetActive(true);
             }
             else
             {
