@@ -737,11 +737,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8784556350219152097, guid: ff28a97a40ea1b445b6780a42218e424, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -190
       objectReference: {fileID: 0}
     - target: {fileID: 8784556350219152097, guid: ff28a97a40ea1b445b6780a42218e424, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -150
       objectReference: {fileID: 0}
     - target: {fileID: 8784556350219152097, guid: ff28a97a40ea1b445b6780a42218e424, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2993,11 +2993,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8784556350219152097, guid: ff28a97a40ea1b445b6780a42218e424, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 190
       objectReference: {fileID: 0}
     - target: {fileID: 8784556350219152097, guid: ff28a97a40ea1b445b6780a42218e424, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 8784556350219152097, guid: ff28a97a40ea1b445b6780a42218e424, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3740,7 +3740,7 @@ MonoBehaviour:
   bow: {fileID: 669821072}
   inventory_UI: {fileID: 133398661}
   Arrow_Enemy_Count_UI: {fileID: 1163420541}
-  IDoNotGiveARatBullOfThisShit: 1
+  IDoNotGiveARatBullOfThisShit: 0
 --- !u!1 &1550473378
 GameObject:
   m_ObjectHideFlags: 0
@@ -4077,11 +4077,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8784556350219152097, guid: ff28a97a40ea1b445b6780a42218e424, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 190
       objectReference: {fileID: 0}
     - target: {fileID: 8784556350219152097, guid: ff28a97a40ea1b445b6780a42218e424, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -150
       objectReference: {fileID: 0}
     - target: {fileID: 8784556350219152097, guid: ff28a97a40ea1b445b6780a42218e424, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5320,11 +5320,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8784556350219152097, guid: ff28a97a40ea1b445b6780a42218e424, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -190
       objectReference: {fileID: 0}
     - target: {fileID: 8784556350219152097, guid: ff28a97a40ea1b445b6780a42218e424, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 8784556350219152097, guid: ff28a97a40ea1b445b6780a42218e424, type: 3}
       propertyPath: m_LocalPosition.z
