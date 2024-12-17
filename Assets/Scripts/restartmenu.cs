@@ -37,6 +37,9 @@ public class RestartMenu : MonoBehaviour
         Stats_Manager.Instance.Restart();
         //forces a reset of the players health UI
         player.GetComponentInChildren<Player_Health>().ChangeHealth(0);
+        GameObject[] roots = GetDontDestroyOnLoadObjects();
+        GameObject wpUI = roots.First((obj) => { return obj.name == "Weapon_Switcher_UI"; });
+        wpUI.GetComponentInChildren<ActiveInventory>().ToggleActiveSlot(1, true);
         //resets all of the arrows to the default value
         player.GetComponentInChildren<PlayerAimAndShoot>().BulletCount = 10;
         player.GetComponent<doormgr_pointer>().pointer.SetActive(true);
