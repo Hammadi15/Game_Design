@@ -1,3 +1,4 @@
+using Unity.Mathematics;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
@@ -9,6 +10,12 @@ public class Player_Combat : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             collision.gameObject.GetComponent<Enemy_Health>().ChangeHealth(Stats_Manager.Instance.Sword_Damage);
+            SoundManager.instance.PlaySound(hitSound);
+
+        }
+        if (collision.gameObject.tag == "Boss")
+        {
+            collision.gameObject.GetComponent<Boss_Health>().ChangeHealth(Stats_Manager.Instance.Sword_Damage);
             SoundManager.instance.PlaySound(hitSound);
         }
     }

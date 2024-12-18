@@ -17777,15 +17777,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textDisplay: {fileID: 266557455}
   sentences:
-  - Good morning soldier, had a good sleep, well if you did not wake up from the
-    horible cries of the villegers then i can defenetly understand
-  - You must use your strong legs to move in the world(W, A, S, D). And to see your
-    stats you must focus on your inner self (Press E to see stats)
+  - Good morning soldier! Had a good sleep? Well if you did not wake up from the
+    horrible cries of the villagers, then i can definitely understand.
+  - You must use your strong legs to move in the world (W, A, S, D). To see your
+    stats you must focus on your inner self (Press E to see stats).
   - Use your sword to slice the goblins (Left click) and bow to shoot them between
-    the eye(left click). to change the wepons you must be strong (1; Bow 2; Sword)
-  - Be cearfull, you only have a set amount of arrows that you can carry(max 10 arrows
-    at any time)
-  - You must defeat all the goblin to callenge the boss.
+    the eyes (Left click). To change the weapons you must be strong (Num 1; Bow,
+    Num 2; Sword).
+  - 'You can find arrows scatterd about everywhere in the cave. Be carefull, you
+    only have a set amount of arrows that you can carry (max 10 arrows at any time).
+    There are also a few healing potions in there. USE THEM WISELY! '
+  - You must defeat all the goblins to challenge the boss. When the boss is defeated
+    your mission is completed.
   typingSpeed: -0.01
   continueButton: {fileID: 1334920366}
   Dialog_box_UI: {fileID: 1638757429}

@@ -76,11 +76,11 @@ GameObject:
   - component: {fileID: 3055296149422128173}
   - component: {fileID: 433046274689346018}
   - component: {fileID: 2860371219945188534}
-  - component: {fileID: 8861043577265665145}
   - component: {fileID: 3535983213251504518}
+  - component: {fileID: 9214805160007577849}
   m_Layer: 8
   m_Name: Goblin_Boss
-  m_TagString: Enemy
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -262,22 +262,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &8861043577265665145
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7813089412696179110}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77d1519b13218f7d8973d4af1342d4cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ExperienceReward: 3
-  deathSound: {fileID: 8300000, guid: b977e47a57d84c842aa96de20dc883bb, type: 3}
-  CurrentHealth: 3
-  MaxHealth: 3
 --- !u!114 &3535983213251504518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -300,3 +284,19 @@ MonoBehaviour:
     m_Bits: 128
   player: {fileID: 0}
   JumpAttackRange: 2
+--- !u!114 &9214805160007577849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7813089412696179110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a38bc86440cdf6a5921aa96d0d32826, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathSound: {fileID: 8300000, guid: c0fd634b701fe8945815644530fb90df, type: 3}
+  CurrentHealth: 100
+  MaxHealth: 100
+  Health_Bar: {fileID: 0}

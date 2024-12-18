@@ -26,6 +26,8 @@ public class Enemy_manager : MonoBehaviour
         pointer.SetActive(false);
         //finds all GameObjects that has the tag "Enemy" and sets the enemy_count to the length the responds
         enemy_count = GameObject.FindGameObjectsWithTag("Enemy").Length;
+
+        enemy_count += GameObject.FindGameObjectsWithTag("Boss").Length;
     }
 
     // Update is called once per frame

@@ -8,7 +8,7 @@ public class ActiveInventory : MonoBehaviour
 
     // Reference to WeaponManager
     [SerializeField] private WeaponManager weaponManager;
-    private Sword_Weapon sword_weapon;
+    public Sword_Weapon sword_weapon;
 
     private void Awake()
     {

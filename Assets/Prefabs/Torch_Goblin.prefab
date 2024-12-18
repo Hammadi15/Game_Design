@@ -295,7 +295,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77d1519b13218f7d8973d4af1342d4cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ExperienceReward: 2
+  ExperienceReward: 1
+  DamagePoint: {fileID: 1091128342628701126, guid: fe482f0cc2a6195b590e6da1bd5c0e59, type: 3}
   deathSound: {fileID: 8300000, guid: c0fd634b701fe8945815644530fb90df, type: 3}
   CurrentHealth: 3
   MaxHealth: 3

@@ -23,6 +23,8 @@ public class Stats_Manager : MonoBehaviour
     public int CurrentHealth;
     public GameObject restart_ui;
     public bool done_tutorial;
+    public float TimePlayed;
+    public bool Timestop = false;
 
     private void Awake()
     {
@@ -45,6 +47,10 @@ public class Stats_Manager : MonoBehaviour
         if (CurrentHealth <= 0 && !restart_ui.activeSelf)
         {
             restart_ui.SetActive(true);
+        }
+        if (!Timestop)
+        {
+            TimePlayed += Time.deltaTime;
         }
     }
     public void Restart()

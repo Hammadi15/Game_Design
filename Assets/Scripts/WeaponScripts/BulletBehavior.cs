@@ -41,6 +41,12 @@ public class BulletBehavior : MonoBehaviour
                 iDamage.ChangeHealth(Stats_Manager.Instance.Bow_Damage);
 
             }
+            Boss_Health vDamage = collision.gameObject.GetComponent<Boss_Health>();
+            if (vDamage != null)
+            {
+                vDamage.ChangeHealth(Stats_Manager.Instance.Bow_Damage);
+
+            }
             Destroy(gameObject);
         }
     }
