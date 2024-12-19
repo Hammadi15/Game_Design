@@ -9,7 +9,6 @@ public class Enemy_Combat : MonoBehaviour
     public Transform AttackPoint;
     public float WeaponRange;
     public LayerMask playerLayer;
-    [SerializeField] private AudioClip hitSound;
 
     private void OnCollision2D(Collision2D collision)
     {
@@ -26,7 +25,6 @@ public class Enemy_Combat : MonoBehaviour
         if (hits.Length > 0)
         {
             hits[0].GetComponentInChildren<Player_Health>().ChangeHealth(Damage);
-            SoundManager.instance.PlaySound(hitSound);
         }
     }
 }

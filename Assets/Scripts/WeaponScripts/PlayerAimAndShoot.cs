@@ -9,7 +9,6 @@ public class PlayerAimAndShoot : MonoBehaviour
     public GameObject Bullet;
     [SerializeField] private Transform bulletSpwanPoint;
     [SerializeField] private float shootCooldown = 0.5f; // Cooldown duration in seconds
-    [SerializeField] private AudioClip shootSound;
 
     public int BulletCount = 10;
     private float timer = 0f; // Tracks cooldown time
@@ -60,7 +59,6 @@ public class PlayerAimAndShoot : MonoBehaviour
             // Spawn bullet
             Instantiate(Bullet, bulletSpwanPoint.position, gun.transform.rotation);
             timer = shootCooldown;
-            SoundManager.instance.PlaySound(shootSound);
         }
     }
 

@@ -32,13 +32,6 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    // A public method to play a sound clip using the AudioSource.
-    public void PlaySound(AudioClip _sound)
-    {
-        // Play the provided AudioClip once, without interrupting currently playing sounds.
-        source.PlayOneShot(_sound);
-    }
-
     // Add this method to change the background music.
     public void ChangeBackgroundMusic(AudioClip newMusic)
     {

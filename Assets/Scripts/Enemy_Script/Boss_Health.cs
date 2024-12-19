@@ -4,7 +4,6 @@ using UnityEngine;
 public class Boss_Health : MonoBehaviour
 {
 
-    [SerializeField] private AudioClip deathSound;
 
     public int CurrentHealth;
     public int MaxHealth;
@@ -32,7 +31,6 @@ public class Boss_Health : MonoBehaviour
         else if (CurrentHealth <= 0)
         {
             Destroy(gameObject);
-            SoundManager.instance.PlaySound(deathSound);
             Enemy_manager.Instance.enemy_count -= 1;
             Stats_Manager.Instance.Timestop = true;
         }

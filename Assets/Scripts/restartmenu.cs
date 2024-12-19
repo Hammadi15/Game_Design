@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class RestartMenu : MonoBehaviour
 {
-    public Object Restart_to;
+    public string Restart_to;
     public GameObject player;
     public GameObject timer;
     private static GameObject[] GetDontDestroyOnLoadObjects()
@@ -48,9 +48,9 @@ public class RestartMenu : MonoBehaviour
         Stats_Manager.Instance.TimePlayed = 0;
         Stats_Manager.Instance.Timestop = false;
         //checks if the current scene isn't the scene that we are suppose to reset to and based on that loads the reset scene or tries to reload the current scene if it is the reset to scene
-        if (SceneManager.GetActiveScene().name != Restart_to.name)
+        if (SceneManager.GetActiveScene().name != Restart_to)
         {
-            SceneManager.LoadScene(Restart_to.name);
+            SceneManager.LoadScene(Restart_to);
         }
         else
         {

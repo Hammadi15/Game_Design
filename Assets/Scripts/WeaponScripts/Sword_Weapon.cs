@@ -8,7 +8,6 @@ public class Sword_Weapon : MonoBehaviour
     [SerializeField] private float shootCooldown = 0.5f; // Cooldown duration in seconds
     private bool isFiring = false; // Tracks if the player is holding the fire button
     public bool canAttack = true; // Tracks if the weapon can attack (cooldown complete)
-    [SerializeField] private AudioClip swordSound;
 
     private void Awake()
     {
@@ -53,7 +52,6 @@ public class Sword_Weapon : MonoBehaviour
         {
             canAttack = false; // Prevent immediate re-attack
             myAnimator.SetTrigger("Attack");
-            SoundManager.instance.PlaySound(swordSound);
             yield return new WaitForSeconds(shootCooldown); // Wait for cooldown
             canAttack = true;
         }

@@ -9,7 +9,6 @@ public class BulletBehavior : MonoBehaviour
 
     [Header("Normal Bullet Stats")]
     [SerializeField] private float normalBulletSpeed = 15f; //bullet speed
-    [SerializeField] private AudioClip hitSound;
 
     private Rigidbody2D rb;
     private void Start()
@@ -30,7 +29,6 @@ public class BulletBehavior : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        SoundManager.instance.PlaySound(hitSound);
         //is the collision within the whatDestroysBullet layermask
         if ((whatDestroysBullet.value & (1 << collision.gameObject.layer)) > 0)
         {
