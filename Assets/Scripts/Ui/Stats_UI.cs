@@ -54,7 +54,7 @@ public class Stats_UI : MonoBehaviour
     }
     public void UpdateStunTime()
     {
-        Stats_Slots[2].GetComponentInChildren<TMP_Text>().text = "Stun: " + Stats_Manager.Instance.StunTime;
+        Stats_Slots[2].GetComponentInChildren<TMP_Text>().text = "Health: " + Stats_Manager.Instance.CurrentHealth;
     }
     public void UpdateSpeed()
     {

@@ -3561,9 +3561,9 @@ GameObject:
   - component: {fileID: 524582564}
   - component: {fileID: 524582562}
   - component: {fileID: 524582566}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Arrow_reload
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19925,9 +19925,9 @@ GameObject:
   - component: {fileID: 1983848849}
   - component: {fileID: 1983848848}
   - component: {fileID: 1983848847}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Arrow_reload (1)
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
